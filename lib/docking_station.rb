@@ -5,7 +5,7 @@ class DockingStation
   include BikeContainer
   
   def initialize(options = {})
-  		# self.capacity is calling the capacity=() menthod (note the equals sign)
+  		# self.capacity is calling the capacity= menthod (note: the equals sign is part of the method name)
   		# defined in BikeContainer
 
   		# capacity (the second argument to fetch()) is calling the capacity() method

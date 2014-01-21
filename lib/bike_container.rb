@@ -10,9 +10,10 @@ module BikeContainer
     @capacity ||= DEFAULT_CAPACITY
   end
 
-  def capacity=(value)
-  	@capacity = value
-  end
+  attr_writer :capacity
+  #def capacity=(value)
+  #	@capacity = value
+  #end
   
   def initialize(options = {})
   	@capacity = options.fetch(:capacity,DEFAULT_CAPACITY)
@@ -30,6 +31,7 @@ module BikeContainer
 
   def release bike
     bikes.delete(bike) 
+    # not a problem if the bike isn't there -- returns a nil value
   end
 
   def full?
