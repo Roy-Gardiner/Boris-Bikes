@@ -10,10 +10,6 @@ def fill_holder(holder)
   10.times{holder.dock(Bike.new)}
 end
 
-
-
-
-
 describe Bike do 
 
   let(:bike) {Bike.new}

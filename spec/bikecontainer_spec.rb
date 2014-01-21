@@ -25,12 +25,9 @@ describe BikeContainer do
   	expect {holder.release()}.to raise_error(ArgumentError)
   end
 
-  it "should have a valid bike argument" do 
-  	expect(holder.release(holder)).to eq(nil)
-  end
   
   it "should not attempt to release something not a bike" do 
-  	expect(holder.release(holder)).to eq(nil)
+  	expect {holder.release(holder)}.to raise_error(RuntimeError)
   end
 
 

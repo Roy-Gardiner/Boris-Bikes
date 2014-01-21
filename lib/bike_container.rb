@@ -25,11 +25,13 @@ module BikeContainer
   end
 
   def dock bike
+  	raise "Argument to dock is not a bike" if !bike.is_a?(Bike)
     raise "Container is full" if full? 
   	bikes << bike
   end 	
 
   def release bike
+  	raise "Argument to release is not a bike" if !bike.is_a?(Bike)
     bikes.delete(bike) 
     # not a problem if the bike isn't there -- returns a nil value
   end
