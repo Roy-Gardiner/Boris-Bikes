@@ -1,0 +1,4 @@
+1 	OK
+2 	OK
+3 	2 new methods, working_bikes and broken_bikes.  Available_bikes to return the concatenation of those two. What does 'interact with the van' mean?
+4		Yes, it counts all bikes whether or not they are broken.  We may introduce more categories for bikes, we do want simply to be able to count them all.

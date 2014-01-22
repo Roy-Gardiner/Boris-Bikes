@@ -40,7 +40,20 @@ module BikeContainer
   	bike_count == capacity
   end
 
+  def empty?
+  	bike_count == 0
+  end
+
   def available_bikes
+    working_bikes.concat broken_bikes
+  end
+
+  def working_bikes
     bikes.reject{|bike| bike.broken?} 
   end
+  
+  def broken_bikes
+    bikes.reject{|bike| !bike.broken?} 
+  end
+
 end
