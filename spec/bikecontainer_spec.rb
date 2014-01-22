@@ -76,7 +76,20 @@ describe BikeContainer do
   	broken_bike.break
   	holder.dock(working_bike)
   	holder.dock(broken_bike)
-  	expect(holder.available_bikes).to eq([working_bike, broken_bike])
+  	expect(holder.bikes).to eq([working_bike, broken_bike])
+  end
+
+  it "should be able to tell you if it has any broken bikes" do 
+    broken_bike = Bike.new
+    broken_bike.break
+    holder.dock(broken_bike)
+    expect(holder.broken_bikes?).to eq(true)
+  end
+
+  it "should be able to tell you if it has any working bikes" do 
+    bike = Bike.new
+    holder.dock(bike)
+    expect(holder.working_bikes?).to eq(true)
   end
 
 end	

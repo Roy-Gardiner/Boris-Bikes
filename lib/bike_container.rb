@@ -44,16 +44,21 @@ module BikeContainer
   	bike_count == 0
   end
 
-  def available_bikes
-    working_bikes.concat broken_bikes
-  end
+  #def available_bikes
+  #  working_bikes.concat broken_bikes
+  #end
 
   def working_bikes
     bikes.reject{|bike| bike.broken?} 
+  end
+  def working_bikes?
+    working_bikes != [] 
   end
   
   def broken_bikes
     bikes.reject{|bike| !bike.broken?} 
   end
-
+  def broken_bikes?
+    broken_bikes != [] 
+  end
 end

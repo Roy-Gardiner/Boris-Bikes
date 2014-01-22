@@ -1,4 +1,28 @@
 1 	OK
+
 2 	OK
+
 3 	2 new methods, working_bikes and broken_bikes.  Available_bikes to return the concatenation of those two. What does 'interact with the van' mean?
+
 4		Yes, it counts all bikes whether or not they are broken.  We may introduce more categories for bikes, we do want simply to be able to count them all.
+
+5		What should the van be able to do?
+
+		- check if a station has broken bikes 
+		- pick up broken bikes from a station, up to its capacity
+		- dock all broken bikes at the garage. Note broken bikes are fixed automagically.
+		- check if the garage has fixed bikes
+		- pick up fixed bikes from the garage, up to its capacity
+		- dock fixed bikes with a station, up to the station's capacity
+
+6		Can we do this without doing 5?
+
+7		Van class.  Van moves.  Extra methods?  Dunno
+
+8		Probably good to change; release by default fixed bikes from garage to van, broken bikes from station to van
+
+9		What kind of scenarios?  Should we cater for a van being struck by a bolt of lightning, and should we blame some of the people in this room?
+
+10	Refactoring?  What, My Perfect Code?!  There's a song title.
+
+
